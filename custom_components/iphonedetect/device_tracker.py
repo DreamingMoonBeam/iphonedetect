@@ -18,9 +18,8 @@ import homeassistant.helpers.config_validation as cv
 import homeassistant.util.dt as dt_util
 import voluptuous as vol
 from homeassistant.components.device_tracker import PLATFORM_SCHEMA
-from homeassistant.components.device_tracker.const import (SCAN_INTERVAL,
-                                                           SOURCE_TYPE_ROUTER,
-                                                           ATTR_IP)
+from homeassistant.components.device_tracker.const import (SCAN_INTERVAL, ATTR_IP)
+from homeassistant.components.device_tracker import sourceType.ROUTER
 from homeassistant.const import CONF_HOSTS, CONF_SCAN_INTERVAL
 
 from .const import (
@@ -61,7 +60,7 @@ class Host:
             _LOGGER.debug(f"Device {self.dev_id} on {self.dev_ip} is HOME")
             see(dev_id=self.dev_id,
             attributes = {ATTR_IP: self.dev_ip},
-            source_type=SOURCE_TYPE_ROUTER)
+            source_type=sourceType.ROUTER)
         else:
             _LOGGER.debug(f"Device {self.dev_id} on {self.dev_ip} is AWAY")
 
