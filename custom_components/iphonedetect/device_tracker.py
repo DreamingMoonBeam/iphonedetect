@@ -19,7 +19,7 @@ import homeassistant.util.dt as dt_util
 import voluptuous as vol
 from homeassistant.components.device_tracker import PLATFORM_SCHEMA
 from homeassistant.components.device_tracker.const import (SCAN_INTERVAL, ATTR_IP)
-from homeassistant.components.device_tracker import sourceType.ROUTER
+from homeassistant.components.device_tracker import sourceType
 from homeassistant.const import CONF_HOSTS, CONF_SCAN_INTERVAL
 
 from .const import (
